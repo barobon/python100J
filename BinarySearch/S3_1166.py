@@ -1,5 +1,5 @@
 N, L , W, H = map(int, input().split())
-left, right = 0, max(L, W, H)
+left, right = 0, max(L, W, H)   # min을 사용하면 오류나는데 원인을 잘 모르겠음
 
 for _ in range(10000):
     mid = (left + right) / 2
