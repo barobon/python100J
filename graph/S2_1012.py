@@ -6,13 +6,14 @@ dx = [1, -1, 0, 0]
 dy = [0, 0, -1, 1]
 
 def bfs(x,y):
-    que = deque([x,y])
+    que = deque([[x,y]])
     field[x][y]=0
     while que:
-        que.pop()
+        point = []
+        point = que.pop()
         for i in range(4):
-            q = x + dx[i]
-            w = y + dy[i]
+            q = point[0] + dx[i]
+            w = point[1] + dy[i]
             if 0 <= q < M and 0 <= w < N and field[q][w] == 1:
                 field[q][w] = 0
                 que.append([q, w])
