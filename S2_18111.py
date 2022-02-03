@@ -5,9 +5,9 @@ ground = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
 minTime = int(1e11)
 maxHeight = -1
 
-maxH = max(map(max, ground))
-minH = min(map(min, ground))
-for h in range(minH, maxH+1):
+print(ground)
+
+for h in range(0, 257):
     tmpTime = 0
     stackNum =0
     delNum =0
