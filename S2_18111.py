@@ -5,8 +5,6 @@ ground = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
 minTime = int(1e11)
 maxHeight = -1
 
-print(ground)
-
 for h in range(0, 257):
     tmpTime = 0
     stackNum =0
@@ -21,7 +19,7 @@ for h in range(0, 257):
     if(B<stackNum-delNum):
         continue
     tmpTime = stackNum + delNum * 2
-    if(tmpTime < minTime):
+    if(tmpTime <= minTime):
         minTime = tmpTime
         maxHeight = h
 print(minTime, maxHeight)
